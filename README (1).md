@@ -8,7 +8,7 @@
 ### テーマを選んだ理由
 <!--なぜこのようなテーマにしたかを説明する-->
 今回の勉強の学費を払ってくれた妻に恩返しがしたい、そう思った時にオリジナルのポートフォリオは<br>
-妻の仕事の手助けとなる物が作ｒないかと考えていました。<br>
+妻の仕事の手助けとなる物が作れないかと考えていました。<br>
 妻はアロマを調合しそれをスプレーや香水等の様々なボトルに入れた物をSNSで売る事を仕事としています。<br>
 ただSNSでは依頼案件の管理が難しかったりこんなものがあると毎回説明する妻の労力と、<br>
 どんなものがあるかイメージしづらいお客様のニーズもあるのではないかと思い<br>
@@ -40,7 +40,8 @@ https://docs.google.com/spreadsheets/d/1fZInwTGP1vCcHUOhwrFY3wj2DtyETOYaRmZV6HIk
 - IDE：Cloud9
 ​
 ## 使用素材
-- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
-- アプリケーションの実装に使用したgem/bootstrapのリファレンスなどの記載は不要です。
-- 使用しない場合は、使用素材の項目をREADMEから削除してください。
-折りたたむ
+- https://o-dan.net/ja/
+- https://www.pakutaso.com/
+- https://www.ac-illust.com/
+- https://icooon-mono.com/
+- https://www.designevo.com/logo-maker/
