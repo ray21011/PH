@@ -8,9 +8,110 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/feced20622.js" crossorigin="anonymous"></script>
+
   </head>
 
   <body>
-    <%= yield %>
+    <header class="bg-dark text-white pt-5 pb-4">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <nav>
+            <ul class="left nav navbar-nav navbar-left">
+              <%= link_to root_path do %>
+              <%= image_tag "logo.jpg", :size =>'60x60' %>
+              <h4><a class="navbar-brand text-white" href="/">PURSUING<br>REWARDS</a></h4>
+              <% end %>
+            </ul>
+          </nav>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <% if admin_signed_in? %>
+              <!--管理者ログイン時-->
+                <li class="nav-item">
+                  <%= link_to admin_items_path do %>
+                    <i class="fas fa-cookie-bite text-white">商品一覧</i>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to admin_customers_path do %>
+                    <i class="fas fa-users text-white">会員一覧</i>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to admin_path do %>
+                    <i class="fas fa-clipboard-list text-white">注文履歴一覧</i>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to  destroy_admin_session_path, method: :delete do %>
+                    <i class="fas fa-sign-out-alt text-white">ログアウト</i>
+                  <% end %>
+                </li>
+              <% elsif customer_signed_in? %>
+              <!--会員ログイン時-->
+                <li class="nav-item">
+                  <%= link_to customers_mypage_path do %>
+                    <h6 class="fas fa-user-circle text-white">マイページ</h6>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to destroy_customer_session_path, method: :delete do %>
+                    <h6 class="fas fa-sign-out-alt text-white">ログアウト</h6>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to items_path do %>
+                    <h6 class="fas fa-cookie-bite text-white">商品一覧</h6>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to cart_items_path do %>
+                    <h6 class="fas fa-shopping-cart text-white">カート</h6>
+                  <% end %>
+                </li>
+              <% else %>
+              <!--会員ログアウト時-->
+                <li class="nav-item">
+                  <%= link_to about_path do %>
+                    <i class="fas fa-store-alt text-white">About</i>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to new_customer_registration_path do %>
+                    <i class="fas fa-user-plus text-white">新規登録</i>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to new_customer_session_path do %>
+                    <i class="fas fa-user text-white">ログイン</i>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to items_path do %>
+                    <i class="fas fa-cookie-bite text-white">商品一覧</i>
+                  <% end %>
+                </li>
+              <% end %>
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

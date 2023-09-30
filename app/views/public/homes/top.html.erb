@@ -1,1 +1,47 @@
-top
+<div class="container text-light">
+  <div class="text-light">
+    <div class="home-box mx-auto my-3">
+      <h2 class="home-text text-center">
+        あなたの求めるアロマを<br>
+        あなたの求める形状で<br>
+        あなたのお手元まで<br>
+        <br>
+        PURSUING&ensp;REWARDS
+      </h2>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <%= image_tag "photo-1550159793-ecaa76eaffde.jpg" %>
+      </div>
+      <div class="slide fade">
+        <%= image_tag "photo-1624454002302-36b824d7bd0a.jpg" %>
+      </div>
+      <div class="slide fade">
+        <%= image_tag "photo-1564277817182-ea6c78ffafe0.jpg" %>
+      </div>
+      <div class="slide fade">
+        <%= image_tag "photo-1671492248078-a4bda519c852.jpg" %>
+      </div>
+    </div>
+    </div>
+
+    <div class="container new-item">
+      <h2>新着商品</h2>
+      <div class="row">
+        <% @items.first(4).each do |item| %>
+        <div class="col-md-3 col-sm-6">
+          <div class="card w-100 bg-transparent border-0" style="width: 18rem;">
+            <%=link_to item_path(item) do %>
+              <div class="img-wrap"><%= image_tag item.get_image(80,80), format: "jpeg", fallback: "default-image.jpeg"%></div>
+            <% end %>
+            <div class="card-body">
+              <P class="card-text"><%= item.name %></P>
+              <p class="card-text"><%= item.price %>円（税抜き）</p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <div class="all-items-show-button"><%= link_to "全ての商品をみる", items_path, class: "text-light" %></div>
+    </div>
+  </div>
+</div>

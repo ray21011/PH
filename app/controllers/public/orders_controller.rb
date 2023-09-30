@@ -1,5 +1,5 @@
 class Public::OrdersController < ApplicationController
-  include Public::OrdersHelper
+  # include Public::OrdersHelper
   before_action :authenticate_customer!
   before_action :cart_check, only: [:new, :confirm, :create]
 
