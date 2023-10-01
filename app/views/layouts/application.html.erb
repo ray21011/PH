@@ -28,7 +28,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mr-auto">
               <% if admin_signed_in? %>
               <!--管理者ログイン時-->
                 <li class="nav-item">
@@ -75,6 +75,12 @@
                 </li>
                 &ensp;
                 <li class="nav-item">
+                  <%= link_to perfumes_path do %>
+                    <h6 class="fas fa-solid fa-vials text-white">診断テスト</h6>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
                   <%= link_to cart_items_path do %>
                     <h6 class="fas fa-shopping-cart text-white">カート</h6>
                   <% end %>
@@ -105,6 +111,16 @@
                   <% end %>
                 </li>
               <% end %>
+              </ul>
+              <ul  class="navbar-nav mr-auto">
+              <!--商品検索機能-->
+                <li class="search_form nav-item">
+                  <%= form_with url: search_path, local: true, method: :get do |f| %>
+                    <%= f.text_field :word %>
+                    <%= f.select :search, options_for_select([["完全一致","perfect_match"], ["前方一致","forward_match"],  ["後方一致","backward_match"], ["部分一致","partial_match"]]) %>
+                    <%= f.submit "検索", class: "btn btn-primary" %>
+                  <% end %>
+                </li>
               </ul>
             </div>
           </div>

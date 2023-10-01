@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="row">
+    <div class="intoro text-light">
+      <h3>診断結果</h3>
+      <h4>あなたにおすすめの香りは…</h4>
+      <div class="tweet-container text-light">
+        <div class="tweet">
+          <% if @perfume.question == "1111" %>
+          <h1>レモン</h1>
+          <h5>柑橘系の代表的な原料</h5>
+          <h5>清涼感があり、爽やかな印象</h5>
+
+          <% elsif @perfume.question == "1112" %>
+          <h1>シトラス</h1>
+          <h5>オレンジに似た柑橘系の果物</h5>
+          <h5>リラックス効果がある</h5>
+
+          <% elsif @perfume.question == "1121" %>
+          <h1>ローズ</h1>
+          <h5>華やかで上品な香り</h5>
+          <h5>ストレスを緩和してくれる効果がある</h5>
+
+          <% elsif @perfume.question == "1122" %>
+          <h1>ラベンダー</h1>
+          <h5>優しく女性らしい香り</h5>
+          <h5>気持ちを落ち着かせてくれる</h5>
+
+          <% elsif @perfume.question == "1211" %>
+          <h1>ジャスミン</h1>
+          <h5>爽やかなのに官能的な香り</h5>
+          <h5>幸福感を得やすい</h5>
+
+          <% elsif @perfume.question == "1212" %>
+          <h1>ピーチ</h1>
+          <h5>フレッシュで優しい香り</h5>
+          <h5>アンチエイジングにも最適</h5>
+
+          <% elsif @perfume.question == "1221" %>
+          <h1>アップル</h1>
+          <h5>特徴的で甘い香り</h5>
+          <h5>万人受けしやすい</h5>
+
+          <% elsif @perfume.question == "1222" %>
+          <h1>ユーカリ</h1>
+          <h5>しっかりとした優しい香り</h5>
+          <h5>浄化作用があり。気持ちを落ち着かせてくれる</h5>
+
+          <% elsif @perfume.question == "2111" %>
+          <h1>ローズマリー</h1>
+          <h5>きりりとした強めの香りが特徴的</h5>
+          <h5>美容効果が高い</h5>
+
+          <% elsif @perfume.question == "2112" %>
+          <h1>ベルガモット</h1>
+          <h5>柑橘系の果実</h5>
+          <h5>甘くてフレッシュな、万能な香料</h5>
+
+          <% elsif @perfume.question == "2121" %>
+          <h1>ムスク</h1>
+          <h5>雄のジャコウジカの腹部にある香嚢から抽出した香料</h5>
+          <h5>官能的で重い香り</h5>
+
+          <% elsif @perfume.question == "2122" %>
+          <h1>アンバー</h1>
+          <h5>マッコウクジラの結石から抽出した香料</h5>
+          <h5>魅惑的で色気のある香り</h5>
+
+          <% elsif @perfume.question == "2211" %>
+          <h1>シナモン</h1>
+          <h5>甘いスパイスの香り</h5>
+          <h5>香水のアクセントとしてよく使われる</h5>
+
+          <% elsif @perfume.question == "2212" %>
+          <h1>バニラ</h1>
+          <h5>甘くて官能的な香り</h5>
+          <h5>上品で年齢を問わず人気が高い</h5>
+
+          <% elsif @perfume.question == "2221" %>
+          <h1>イランイラン</h1>
+          <h5>色気のある濃厚で甘い香り</h5>
+          <h5>恋愛に効果があり</h5>
+
+          <% elsif @perfume.question == "2222" %>
+          <h1>サンダルウッド</h1>
+          <h5>お香としてよく使われる白檀の香り</h5>
+          <h5>集中力を高める効果もあり</h5>
+
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
