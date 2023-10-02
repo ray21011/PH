@@ -11,6 +11,7 @@ namespace :admin do
   resources :customers, only: [:index, :show, :edit, :update]
   resources :orders, only: [:show, :update]
   resources :order_details, only: [:update]
+  resources :contacts
 end
 
   get '/admins/sgin_in' => 'admin/session#new'
@@ -30,6 +31,7 @@ scope module: :public do
   get "/orders/complete" => "orders#complete"
   resources :orders, only: [:index, :show, :new, :create]
   resources :perfumes, only: [:index, :new, :show, :create]
+  resources :contacts
 end
   get '/customers/sign_in' => 'public/session#new'
   get '/customers/mypage' => 'public/customers#show'

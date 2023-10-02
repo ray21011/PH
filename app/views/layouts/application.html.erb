@@ -50,6 +50,12 @@
                 </li>
                 &ensp;
                 <li class="nav-item">
+                  <%= link_to  admin_contacts_path, method: :delete do %>
+                    <i class="fas fa-sign-out-alt text-white">ログアウト</i>
+                  <% end %>
+                </li>
+                 &ensp;
+                <li class="nav-item">
                   <%= link_to  destroy_admin_session_path, method: :delete do %>
                     <i class="fas fa-sign-out-alt text-white">ログアウト</i>
                   <% end %>
@@ -77,6 +83,12 @@
                 <li class="nav-item">
                   <%= link_to perfumes_path do %>
                     <h6 class="fas fa-solid fa-vials text-white">診断テスト</h6>
+                  <% end %>
+                </li>
+                &ensp;
+                <li class="nav-item">
+                  <%= link_to new_contact_path do %>
+                    <h6 class="fas fa-solid fa-vials text-white">オーダーメイド注文</h6>
                   <% end %>
                 </li>
                 &ensp;
