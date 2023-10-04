@@ -1,8 +1,8 @@
-class Admins::ContactsController < ApplicationController
+class Admin::ContactsController < ApplicationController
 
 	def index
 		@contacts = Contact.page(params[:page]).order(created_at: :desc).per(16)
-		@users = User.all
+		@users = Customer.all
 	end
 
 	def edit

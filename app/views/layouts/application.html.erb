@@ -15,7 +15,7 @@
   <body>
     <header class="bg-dark text-white pt-5 pb-4">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+        <!--<div class="container">-->
           <nav>
             <ul class="left nav navbar-nav navbar-left">
               <%= link_to root_path do %>
@@ -50,8 +50,8 @@
                 </li>
                 &ensp;
                 <li class="nav-item">
-                  <%= link_to  admin_contacts_path, method: :delete do %>
-                    <i class="fas fa-sign-out-alt text-white">ログアウト</i>
+                  <%= link_to  admin_contacts_path do %>
+                    <i class="fas fa-wrench text-white">オーダーメイド一覧</i>
                   <% end %>
                 </li>
                  &ensp;
@@ -88,7 +88,7 @@
                 &ensp;
                 <li class="nav-item">
                   <%= link_to new_contact_path do %>
-                    <h6 class="fas fa-solid fa-vials text-white">オーダーメイド注文</h6>
+                    <h6 class="fa-solid fa-wrench text-white">オーダーメイド注文</h6>
                   <% end %>
                 </li>
                 &ensp;
@@ -135,7 +135,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          <!--</div>-->
       </nav>
     </header>
     <main>

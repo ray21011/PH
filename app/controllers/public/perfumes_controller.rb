@@ -10,6 +10,7 @@ class Public::PerfumesController < ApplicationController
   def create
     @perfume = Perfume.new(perfume_params)
     params[:perfume][:question] ? @perfume.question = params[:perfume][:question].join("") : false
+    p @perfume
     if @perfume.save
         flash[:notice] = "診断が完了しました"
         redirect_to perfume_path(@perfume.id)
