@@ -1,46 +1,34 @@
 <%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
   <div class="container-sindan text-light">
-    <div class="row">
-      <div class="col-4 text-left">
-        <h4>Question1. どちらかと言うと…</h4>
+    <!--<div class="row">-->
+      <div class="text-center font-weight-bold">
+        <h2>Question1. どちらかと言うと…</h2><br>
       </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>じっくり考える方だ</h5>
-      </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "2", nil %>考えるより行動する方だ</h5>
+      <div class="text-center">
+        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>じっくり考える方だ &ensp;<%= f.check_box :question, {multiple: true}, "2", nil %>考えるより行動する方だ</h5><br>
       </div>
 
-      <div class="col-4 text-left">
-        <h4>Question2. 価値観として近い方は…</h4>
+      <div class="text-center font-weight-bold">
+        <h2>Question2. 価値観として近い方は…</h2><br>
       </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>周りの人と違う存在でありたい</h5>
-      </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "2", nil %>周りと同じでいたい</h5>
+      <div class="text-center">
+        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>周りの人と違う存在でありたい &ensp;<%= f.check_box :question, {multiple: true}, "2", nil %>周りと同じでいたい</h5><br>
       </div>
 
-      <div class="col-4 text-left">
-        <h4>Question3. 人と接するときは…</h4>
+      <div class="text-center font-weight-bold">
+        <h2>Question3. 人と接するときは…</h2><br>
       </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>相手の話をよく聞く方だ</h5>
-      </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "2", nil %>自分の話をよくする方だ</h5>
+      <div class="text-center">
+        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>相手の話をよく聞く方だ &ensp;<%= f.check_box :question, {multiple: true}, "2", nil %>自分の話をよくする方だ</h5><br>
       </div>
 
-      <div class="col-4 text-left">
-        <h4>Question4. 大切にしたいのは…</h4>
+      <div class="text-center font-weight-bold">
+        <h2>Question4. 大切にしたいのは…</h2><br>
       </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>論理性だ</h5>
+      <div class="text-center">
+        <h5><%= f.check_box :question, {multiple: true}, "1", nil %>論理性だ &ensp;<%= f.check_box :question, {multiple: true}, "2", nil %>情緒だ</h5><br>
       </div>
-      <div class="col-3 text-left">
-        <h5><%= f.check_box :question, {multiple: true}, "2", nil %>情緒だ</h5>
-      </div>
-    </div>
+    <!--</div>-->
   </div>
   <div class="sindanbotan col-10 text-right">
       <%= f.submit "診断" %>

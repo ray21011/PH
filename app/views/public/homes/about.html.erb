@@ -1,13 +1,18 @@
 <div class="container about-box text-light">
-  <div class="plate mx-auto mb-5" id="cork">
-    <span>About</span>
+  <div class="plate mx-auto mb-5" id="cork"><br>
+    <h2 class="text-center">~店舗紹介~</h2>
   </div>
-  <p>
-    ながのCAKEは全国発送可能なケーキ屋さんです。<br>
-    お子様からお年寄りの方までお召し上がりいただけるよう、<br>
-    様々なバリエーションをご用意しております。<br>
-    また、全国へ配送可能ですので「いつ」でも「どこ」でもご注文いただけます。<br>
-    ぜひご注文ください。
-  </p>
-  <div class="about-img mx-auto"></div>
+  <h4 class="text-center">
+    当店は全国発送可能なアロマ専門店となっております。<br>
+    女性、男性、年齢、アロマの経験を問わずどなたでも、<br>
+    お気軽にご購入頂けるよう、様々な効能、香りをご用意しております。<br>
+    「こんな香りのものが欲しいのに見つからない・・・。」という方は<br>
+    ぜひ<u><%= link_to "オーダーメイド注文",new_contact_path, class: "text-light" %></u>ページをご活用下さいませ。<br>
+    １から調合し新鮮な商品をお届け致します。<br>
+    「初めてで香りが分からない・・・。」という方は<br>
+    <u><%= link_to "診断テスト", perfumes_path, class: "text-light" %></u>も試して見て下さい。<br>
+  </h4><br><br>
+  <div class="about-img mx-auto text-center">
+    <%= image_tag "logo.jpg" %>
+  </div><br>
 </div>

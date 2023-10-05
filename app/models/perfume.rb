@@ -1,4 +1,3 @@
 class Perfume < ApplicationRecord
   
- 
 end

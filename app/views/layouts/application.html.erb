@@ -12,7 +12,7 @@
 
   </head>
 
-  <body>
+  <body class="d-flex flex-column h-100">
     <header class="bg-dark text-white pt-5 pb-4">
       <nav class="navbar navbar-expand-lg navbar-light">
         <!--<div class="container">-->
@@ -138,8 +138,18 @@
           <!--</div>-->
       </nav>
     </header>
-    <main>
+    <main class="container flex-shrink-0 shadow">
       <%= yield %>
     </main>
+    <footer class="mt-auto bg-dark py-2 text-center">
+      <div class="container">
+        <p class="text-center text-light">© 2023 10 TIMRAY FAMILY </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="mx-1 text-light"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="mx-5 text-light"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="mx-1 text-light"><i class="far fa-envelope fa-2x"></i></a>
+          </div>
+      </div>
+    </footer>
   </body>
 </html>
