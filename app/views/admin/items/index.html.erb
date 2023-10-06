@@ -1,14 +1,14 @@
-<div class="container text-light">
+<div class="container text-light text-center">
   <div class="row">
-    <div class="col-sm-8 px-sm-0 offset-sm-1">
-      <h2>商品一覧</h2>
+    <div class="col-sm-8 px-sm-0 offset-sm-1"><br>
+      <h2>商品一覧</h2><br>
     </div>
     <div class="col-sm-2 px-sm-0 text-right mb-2">
       <%= link_to new_admin_item_path, class:"btn btn--circle btn--circle-c btn--shadow text-light" do %>
         <i class="fa-regular fa-pen-to-square"></i>
       <% end %>
     </div>
-    <div class="row">
+    <div class="row col">
       <div class="col-sm-10 px-sm-0 mx-auto mb-5">
         <table class="table text-center admin-items mb-5 text-light">
           <thead>
@@ -22,7 +22,7 @@
           <% @items.each do |item| %>
             <tr>
               <th class="align-middle"><%= item.id %></th>
-              <th class="align-middle"><%= link_to admin_item_path(item.id) do %>
+              <th class="align-middle"><%= link_to admin_item_path(item.id), class: "text-light" do %>
                 <u><%= item.name %></u>
               </th>
               <% end %>

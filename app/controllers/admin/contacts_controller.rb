@@ -12,16 +12,17 @@ class Admin::ContactsController < ApplicationController
 	def update
 		contact = Contact.find(params[:id]) #contact_mailer.rbの引数を指定
 	   	contact.update(contact_params)
-	   	user = contact.user
-	   	ContactMailer.send_when_admin_reply(user, contact).deliver_now #確認メールを送信
+	   	customer = contact.customer
+	   	ContactMailer.send_when_admin_reply(customer, contact).deliver_now #確認メールを送信
 	   	redirect_to admins_items_path
+	   	@customer = Customer.find(params[:id])
 	end
 
 	def destroy
 		contact = Contact.find(params[:id])
 		contact.destroy
 		@contacts = Contact.page(params[:page]).order(created_at: :desc).per(16)
-		@users = User.all
+		@users = Customer.all
 		render :index
 	end
 

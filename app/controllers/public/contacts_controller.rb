@@ -5,7 +5,7 @@ class Public::ContactsController < ApplicationController
 
   def create
 		@contact = Contact.new(contact_params)
-		@contact.user_id = current_user.id
+		@contact.customer_id = current_customer.id
 		if @contact.save
 			redirect_to root_path
 		else
