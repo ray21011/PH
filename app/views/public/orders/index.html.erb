@@ -19,7 +19,7 @@
               <td class="align-middle"><%= "〒#{order.postal_code}" %><br><%= order.address %><br><%= order.address_name %></td>
               <td class="align-middle" style="word-break:break-all">
                 <% order.order_details.each do |order_detail| %>
-                  <%= link_to order_detail.item.name,item_path(order_detail.item) %><br>
+                  <u><%= link_to order_detail.item.name,item_path(order_detail.item), class: "text-light" %></u><br>
                 <% end %>
               </td>
               <td class="align-middle"><%= "#{order.billing_amount}円" %></td>

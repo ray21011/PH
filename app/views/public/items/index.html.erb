@@ -14,11 +14,10 @@
         <div class="card-body">
           <p class="item-details card-text"><%= item.name %></p>
           <p class="item-details card-text"><%= item.price %>円（税抜）</p>
-
         </div>
       </div>
     </div>
     <% end %>
   </div>
-    <%= paginate @items, class:"text-center" %>
+    <%= paginate @items, class: "text-center text-light" %>
 </div>

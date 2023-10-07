@@ -1,0 +1,13 @@
+<div class="container text-light">
+  <h2>Results index</h2>
+
+  <table class="table table-hover table-inverse text-light">
+      <tbody>
+        <% @items.each do |item| %>
+          <tr>
+            <td><u><%= link_to item.name, item_path(item.id), class: "text-light" %></u></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</div>

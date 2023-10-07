@@ -1,11 +1,11 @@
- <div class="container text-light">
+ <div class="container text-light"><br><br>
     <% if @contact.errors.any? %>
       <%= @contact.errors.count %>件のエラー。
       <% @contact.errors.full_messages.each do |message| %>
       <%= message %>。
       <% end %>
     <% end %>
-    <h2 class="contact-title">オーダーメイド注文ページ</h2>
+    <h2 class="contact-title">オーダーメイド注文ページ</h2><br><br>
       <%= form_with model: @contact do |f| %>
         <select class="form-select" aria-label="Default select example">
           <option selected>形状</option>
@@ -21,12 +21,12 @@
           <option value="2">10ml</option>
           <option value="3">15ml</option>
           <option value="4">20ml</option>
-        </select>
+        </select><br><br>
         <br>
         <%= f.label :オーダー内容 %>
-          <%= f.text_field :title, class: "form-control col-6" %>
+          <%= f.text_field :title, class: "form-control col-6" %><br>
           <%= f.label :その他要望 %>
-          <%= f.text_field :body, class: "form-control col-6" %>
+          <%= f.text_field :body, class: "form-control col-6" %><br><br>
           <%= f.submit "送信" %>
-        <% end %>
+        <% end %><br>
 </div>

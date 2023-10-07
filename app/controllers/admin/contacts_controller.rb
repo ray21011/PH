@@ -13,9 +13,9 @@ class Admin::ContactsController < ApplicationController
 		contact = Contact.find(params[:id]) #contact_mailer.rbの引数を指定
 	   	contact.update(contact_params)
 	   	customer = contact.customer
-	   	ContactMailer.send_when_admin_reply(customer, contact).deliver_now #確認メールを送信
-	   	redirect_to admins_items_path
-	   	@customer = Customer.find(params[:id])
+	   	#ContactMailer.send_when_admin_reply(customer, contact).deliver_now #確認メールを送信
+	   	redirect_to admin_items_path
+	   	#@customer = Customer.find(params[:id])
 	end
 
 	def destroy

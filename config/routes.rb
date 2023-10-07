@@ -32,6 +32,7 @@ scope module: :public do
   resources :orders, only: [:index, :show, :new, :create]
   resources :perfumes, only: [:index, :new, :show, :create]
   resources :contacts
+  get "search" => "searches#search"
 end
   get '/customers/sign_in' => 'public/session#new'
   get '/customers/mypage' => 'public/customers#show'
@@ -40,6 +41,5 @@ end
   get '/customers/confirm_withdraw' => 'public/customers#check'
   patch '/customers/withdraw' => 'public/customers#withdrawal'
   get '/orders' => 'public/orders#index'
-  get "search" => "searches#search"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

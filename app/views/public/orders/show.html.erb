@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-sm-8 col-md-8 col-lg-8 px-8">
       <p>注文情報</p>
-      <table class="table table-bordered">
+      <table class="table table-bordered text-light">
         <tr><th class="table-active">注文日</th><td><%= @order.created_at.strftime('%Y/%m/%d') %></td></tr>
         <tr><th class="table-active">配送先</th><td><%= "〒#{@order.postal_code}" %><br><%= @order.address %><br><%= @order.address_name %></td></tr>
         <tr><th class="table-active">支払い方法</th><td><%= @order.payment_method %></td></tr>
@@ -11,7 +11,7 @@
     </div>
     <div class="col-sm-3 col-md-3 col-lg-3 px-3 offset-1">
       <p>請求情報</p>
-      <table class="table table-bordered">
+      <table class="table table-bordered text-light">
         <tr><th class="table-active">送料</th><td>800</td></tr>
         <tr><th class="table-active">商品合計</th><td><%= @order.billing_amount - 800 %></td></tr>
         <tr><th class="table-active">請求合計</th><td><%= @order.billing_amount %></td></tr>
@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col-sm-8 col-md-8 col-lg-8 px-8">
       <p>注文内容</p>
-      <table class="table table-bordered">
+      <table class="table table-bordered text-light">
         <thead>
           <tr>
             <th class="table-active" style="width:60%">商品</th>
