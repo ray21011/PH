@@ -103,7 +103,7 @@
                   <li class="search_form nav-item">
                     <%= form_with url: search_path, local: true, method: :get do |f| %>
                       <%= f.text_field :word %>
-                      <%= f.select :search, options_for_select([["完全一致","perfect_match"], ["前方一致","forward_match"],  ["後方一致","backward_match"], ["部分一致","partial_match"]]) %>
+                      <%= f.select :search, options_for_select([["部分一致","partial_match"], ["完全一致","perfect_match"], ["前方一致","forward_match"],  ["後方一致","backward_match"]]) %>
                       <%= f.submit "検索", class: "btn btn-primary" %>
                     <% end %>
                   </li>
@@ -141,7 +141,7 @@
     <main class="container flex-shrink-0 shadow">
       <%= yield %>
     </main>
-    <footer class="mt-auto bg-dark py-2 text-center">
+    <footer class="mt-auto bg-dark pt-5 pb-4 text-center">
       <div class="container">
         <p class="text-center text-light">© 2023 10 TIMRAY FAMILY </p>
           <div class="d-flex justify-content-center">

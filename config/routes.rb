@@ -31,7 +31,7 @@ scope module: :public do
   get "/orders/complete" => "orders#complete"
   resources :orders, only: [:index, :show, :new, :create]
   resources :perfumes, only: [:index, :new, :show, :create]
-  resources :contacts
+  resources :contacts, only: [:new, :index, :create]
   get "search" => "searches#search"
 end
   get '/customers/sign_in' => 'public/session#new'

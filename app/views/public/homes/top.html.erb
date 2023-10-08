@@ -8,30 +8,29 @@
         <br>
         PURSUING&ensp;REWARDS
       </h2>
-    <div class="slideshow-container">
-      <div class="slide fade">
-        <%= image_tag "photo-1550159793-ecaa76eaffde.jpg" %>
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <%= image_tag "photo-1550159793-ecaa76eaffde.jpg" %>
+        </div>
+        <div class="slide fade">
+          <%= image_tag "photo-1624454002302-36b824d7bd0a.jpg" %>
+        </div>
+        <div class="slide fade">
+          <%= image_tag "photo-1564277817182-ea6c78ffafe0.jpg" %>
+        </div>
+        <div class="slide fade">
+          <%= image_tag "photo-1671492248078-a4bda519c852.jpg" %>
+        </div>
       </div>
-      <div class="slide fade">
-        <%= image_tag "photo-1624454002302-36b824d7bd0a.jpg" %>
-      </div>
-      <div class="slide fade">
-        <%= image_tag "photo-1564277817182-ea6c78ffafe0.jpg" %>
-      </div>
-      <div class="slide fade">
-        <%= image_tag "photo-1671492248078-a4bda519c852.jpg" %>
-      </div>
-    </div>
-    </div>
-
+    </div><br>
     <div class="container new-item">
       <h2>新着商品</h2>
       <div class="row">
-        <% @items.first(4).each do |item| %>
+        <% @items.first(8).each do |item| %>
         <div class="col-md-3 col-sm-6">
           <div class="card w-100 bg-transparent border-0" style="width: 18rem;">
             <%=link_to item_path(item) do %>
-              <div class="img-wrap"><%= image_tag item.get_image(80,80), format: "jpeg", fallback: "default-image.jpeg"%></div>
+              <div class="img-wrap"><%= image_tag item.get_image(180,180), format: "jpeg", fallback: "default-image.jpeg"%></div>
             <% end %>
             <div class="card-body">
               <P class="card-text"><%= item.name %></P>
@@ -42,6 +41,6 @@
         <% end %>
       </div>
       <div class="all-items-show-button"><u><%= link_to "全ての商品をみる", items_path, class: "text-light" %></u></div>
-    </div>
+    </div><br>
   </div>
 </div>

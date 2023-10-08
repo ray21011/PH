@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="intoro text-light text-center">
+  <div class="intoro text-light text-center"><br>
     <h2>診断結果</h2>
     <h2>あなたにおすすめの香りは…</h2><br>
     <div class="tweet-container text-light">
@@ -26,6 +26,7 @@
           血行を良くし、肌の明るさを取り戻す。<br>
           髪や爪を強くし、成長を促す。
         </h6><br>
+        <h5><u><%= link_to "レモンの商品はこちら", "/items/1", class: "text-light" %></u></h5>
         <!--診断結果でグレープフルーツの時-->
         <% elsif @perfume.question == "1112" %>
         <h1 class="font-weight-bold">「グレープフルーツ」</h1><br>
@@ -47,6 +48,7 @@
         <h6>
           切り傷の治りを促す。
         </h6><br>
+        <h5><u><%= link_to "レモンの商品はこちら", "/items/2", class: "text-light" %></u></h5>
         <!--診断結果でゼラニウムの時-->
         <% elsif @perfume.question == "1121" %>
         <h1 class="font-weight-bold">「ゼラニウム」</h1><br>
@@ -68,6 +70,7 @@
           皮脂のバランスをととのえる。<br>
           しっしん、やけどの痛みや炎症をやわらげる。
         </h6><br>
+        <h5><u><%= link_to "レモンの商品はこちら", "/items/3", class: "text-light" %></u></h5>
         <!--診断結果でラベンダーの時-->
         <% elsif @perfume.question == "1122" %>
         <h1 class="font-weight-bold">「ラベンダー」</h1><br>
@@ -89,6 +92,7 @@
           日焼けによる炎症をしずめ、やけどの治りを促す。<br>
           ニキビ、虫刺され、水虫などを改善する。
         </h6><br>
+        <h5><u><%= link_to "レモンの商品はこちら", "/items/4", class: "text-light" %></u></h5><br>
         <!--診断結果でオレンジスイートの時-->
         <% elsif @perfume.question == "1211" %>
         <h1 class="font-weight-bold">「オレンジスイート」</h1><br>
@@ -110,6 +114,7 @@
         <h6>
           疲れた肌をいきいきと元気によみがえらせる。
         </h6><br>
+        <h5><u><%= link_to "オレンジスイートの商品はこちら", "/items/5", class: "text-light" %></u></h5><br>
         <!--診断結果でパルマローザの時-->
         <% elsif @perfume.question == "1212" %>
         <h1 class="font-weight-bold">「パルマローザ」</h1><br>
@@ -131,6 +136,7 @@
           しわ予防をはじめ、皮膚の老化防止に効果がある。<br>
           肌の水分バランスと皮脂の分泌を正常にする。
         </h6><br>
+        <h5><u><%= link_to "パルマローザの商品はこちら", "/items/6", class: "text-light" %></u></h5><br>
         <!--診断結果でカモミールの時-->
         <% elsif @perfume.question == "1221" %>
         <h1 class="font-weight-bold">「カモミール」</h1><br>
@@ -151,6 +157,7 @@
           抗炎症作用があるので、肌が荒れているときに。<br>
           切り傷の治療を促進し、虫刺されｌにも有効。
         </h6><br>
+        <h5><u><%= link_to "カモミールの商品はこちら", "/items/7", class: "text-light" %></u></h5><br>
         <!--診断結果でユーカリの時-->
         <% elsif @perfume.question == "1222" %>
         <h1 class="font-weight-bold">「ユーカリ」</h1><br>
@@ -172,6 +179,7 @@
           <h6>
             オイリーヘア、フケ症を改善する。
           </h6><br>
+          <h5><u><%= link_to "ユーカリの商品はこちら", "/items/8", class: "text-light" %></u></h5><br>
         <!--診断結果でローズマリーの時-->
         <% elsif @perfume.question == "2111" %>
         <h1 class="font-weight-bold">「ローズマリー」</h1><br>
@@ -193,6 +201,7 @@
             肌のたるみやむくみを解消する。<br>
             フケを抑え、毛髪の成長を促す。
           </h6><br>
+          <h5><u><%= link_to "ローズマリーの商品はこちら", "/items/9", class: "text-light" %></u></h5><br>
         <!--診断結果でベルガモットの時-->
         <% elsif @perfume.question == "2112" %>
         <h1 class="font-weight-bold">「ベルガモット」</h1><br>
@@ -214,6 +223,7 @@
           <h6>
             脂性肌に向き、しっしん、ニキビをしずめる。
           </h6><br>
+          <h5><u><%= link_to "ベルガモットの商品はこちら", "/items/10", class: "text-light" %></u></h5><br>
         <!--診断結果でフランキンセンスの時-->
         <% elsif @perfume.question == "2121" %>
         <h1 class="font-weight-bold">「フランキンセンス」</h1><br>
@@ -235,6 +245,7 @@
             老化した肌を活性化させる。<br>
             しわやたるみを改善させる。
           </h6><br>
+          <h5><u><%= link_to "フランキンセンスの商品はこちら", "/items/11", class: "text-light" %></u></h5><br>
         <!--診断結果でクラリセージの時-->
         <% elsif @perfume.question == "2122" %>
         <h1 class="font-weight-bold">「クラリセージ」</h1><br>
@@ -257,6 +268,7 @@
             髪の毛の成長を促進する。<br>
             脂性肌をととのえる。
           </h6><br>
+          <h5><u><%= link_to "クラリセージの商品はこちら", "/items/12", class: "text-light" %></u></h5><br>
         <!--診断結果でシダーウッドの時-->
         <% elsif @perfume.question == "2211" %>
         <h1 class="font-weight-bold">「シダーウッド」</h1><br>
@@ -278,6 +290,7 @@
             収れんと殺菌作用でニキビの治りを促す。<br>
             頭皮の脂、フケ、脱毛症をやわらげる。
           </h6><br>
+          <h5><u><%= link_to "シダーウッドの商品はこちら", "/items/13", class: "text-light" %></u></h5><br>
         <!--診断結果でベンゾインの時-->
         <% elsif @perfume.question == "2212" %>
         <h1 class="font-weight-bold">「ベンゾイン」</h1><br>
@@ -299,6 +312,7 @@
           <h6>
             あかぎれや感想肌に潤いを与える。
           </h6><br>
+          <h5><u><%= link_to "ベンゾインの商品はこちら", "/items/14", class: "text-light" %></u></h5><br>
         <!--診断結果でイランイランの時-->
         <% elsif @perfume.question == "2221" %>
         <h1 class="font-weight-bold">「イランイラン」</h1><br>
@@ -320,6 +334,7 @@
           <h6>
             敏感肌の皮脂バランスをととのえる。
           </h6><br>
+          <h5><u><%= link_to "イランイランの商品はこちら", "/items/15", class: "text-light" %></u></h5><br>
         <!--診断結果でサンダルウッドの時-->
         <% elsif @perfume.question == "2222" %>
         <h1 class="font-weight-bold">「サンダルウッド」</h1><br>
@@ -341,7 +356,8 @@
             肌をやわらかくし、トラブル肌を改善する。<br>
             切り傷やひび割れを改善する。
           </h6><br>
-        <% end %>
+          <h5><u><%= link_to "サンダルウッドの商品はこちら", "/items/16", class: "text-light" %></u></h5><br>
+        <% end %><br>
       </div>
     </div>
   </div>

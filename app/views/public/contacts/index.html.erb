@@ -1,0 +1,32 @@
+<div class="container text-light">
+	<div class="row my-3">
+		<div class="col-sm-10 px-sm-0 offset-sm-1"><br>
+			<h2>オーダーメイド注文履歴一覧</h2><br>
+			<h3>会員名　<%= current_customer.last_name + " " + current_customer.first_name%></h3>
+		</div>
+	</div>
+	<div class="row my-3">
+		<div class="col-sm-10 px-sm-0 offset-sm-1">
+			<table class="table table-bordered text-light">
+		  	<thead>
+					<tr>
+						<th>オーダーメイド内容</th>
+						<th>その他要望</th>
+						<th>送信日</th>
+						<th>返答内容</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% current_customer.contacts.each do |contact| %>
+						<tr>
+							<td><%= contact.title %></td>
+							<td><%= contact.body %></td>
+							<td><%= contact.created_at.strftime("%Y年%m月%d日 ") %></td>
+							<td><%= contact.reply %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div><br><br>
