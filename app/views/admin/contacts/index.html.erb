@@ -1,4 +1,4 @@
-<div class="container text-light">
+<div class="text-light">
 	<div class="row my-3">
 		<div class="col-sm-10 px-sm-0 offset-sm-1"><br>
 			<h2>オーダーメイド注文一覧</h2><br>
@@ -11,9 +11,9 @@
 					<tr>
 						<th>ユーザー名</th>
 						<th>オーダーメイド内容</th>
+						<th>その他</th>
 						<th>受信日</th>
-						<!--<th></th>-->
-						<!--<th></th>-->
+						<th>返信内容</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -22,9 +22,10 @@
 							<tr>
 								<td><%= contact.customer.last_name + " " + contact.customer.first_name%></td>
 								<td><%= contact.title %></td>
+								<td><%= contact.body %></td>
 								<td><%= contact.created_at.strftime("%Y年%m月%d日 ") %></td>
+								<td><%= contact.reply %></td>
 								<td><u><%= link_to "返信", edit_admin_contact_path(contact), class: "text-light" %></u></td>
-								<td><u><%= link_to "削除", admin_contact_path(contact), method: :delete, class: "text-light" %></u></td>
 							</tr>
 						<% end %>
 					<% end %>
