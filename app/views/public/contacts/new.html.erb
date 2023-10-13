@@ -5,28 +5,18 @@
       <%= message %>。
       <% end %>
     <% end %>
-    <h2 class="contact-title">オーダーメイド注文ページ</h2><br><br>
+    <h2 class="contact-title">オーダーメイド注文ページ</h2><br>
       <%= form_with model: @contact do |f| %>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>形状</option>
-          <option value="1">香油</option>
-          <option value="2">アロマスプレー</option>
-          <option value="3">ブレンドオイル</option>
-          <option value="4">ヘアオイル</option>
-        </select>
-
-        <select class="form-select" aria-label="Default select example">
-          <option selected>容量</option>
-          <option value="1">5ml</option>
-          <option value="2">10ml</option>
-          <option value="3">15ml</option>
-          <option value="4">20ml</option>
-        </select><br><br>
-        <br>
+        <p>※注意事項※</p>
+        <p>　形状、容量は「その他要望」欄に記入お願いします。記入がなかった場合は香油形状の5mlサイズで作成させて頂きます。<p><br>
+        <p>　形状は、香油、アロマスプレー、ブレンドオイル、ヘアオイルでご用意出来ます。</p><br>
+        <p>　容量は、5ml、10ml、15ml、20mlまでご用意出来ます。</p><br>
+        <p>　金額は形状、容量にて変動されます。こちらで依頼内容確認次第、返信欄に金額、作成日数お伝えさせて頂きます。</p><br>
+        <p>　形状、容量で上記以外をご要望の際にはご相談ください。</p><br>
         <%= f.label :オーダー内容 %>
           <%= f.text_field :title, class: "form-control col-6" %><br>
           <%= f.label :その他要望 %>
-          <%= f.text_field :body, class: "form-control col-6" %><br><br>
+          <%= f.text_field :body, class: "form-control col-6" %><br>
           <%= f.submit "送信" %>
         <% end %><br>
 </div>
