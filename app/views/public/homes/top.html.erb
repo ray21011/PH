@@ -31,9 +31,9 @@
           <div class="card w-100 bg-transparent border-0" style="width: 18rem;">
             <%=link_to item_path(item) do %>
               <div class="img-wrap"><%= image_tag item.get_image(180,180), format: "jpeg", fallback: "default-image.jpeg"%></div>
-            <% end %>
             <div class="card-body">
-              <P class="card-text"><%= item.name %></P>
+              <P class="card-text text-light"><u><%= item.name %></u></P>
+              <% end %>
               <p class="card-text"><%= item.price %>円（税抜き）</p>
             </div>
           </div>
