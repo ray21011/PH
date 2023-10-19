@@ -17,6 +17,11 @@
 					<h4><%= @contact.body %></h4><br>
 				<h5>返信</h5>
 					<%= f.text_area :reply, class:"form-control", placeholder: "返信内容" %><br>
+					<p>
+						※ユーザーからの返事を求める際は最後に下記の文を添えて返信する。<br>
+						お手数ですが、ご返答の際は再度『オーダーメイド注文ページ』の「その他要望」へ<br>
+						ご記入し、再度送信をお願いします。<br>
+					</p>
 					<%= f.submit "送信" %>
 			<% end %><br>
 		</div>
